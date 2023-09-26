@@ -15,6 +15,7 @@
     
     
     
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -116,6 +117,46 @@ while True:
     
     submit = driver.find_element(By.ID, "submit")
     submit.click() </code>
+          </pre>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-10 u-section-2" id="carousel_d9d2">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1"></div>
+        <h1 class="u-text u-text-1"> Misc/OtterSec Is Cat?</h1>
+        <p class="u-text u-text-2"> I trained a Convolutional Neural Network that can recognize ten different classes of images. The other day,&nbsp;NotDeGhost&nbsp;approached me and said: "Don't you know OtterSec is a Cat? Your model is broken!"Unfortunately, my model seems to classify the OtterSec logo as a truck. Can you fix it?<br>
+        </p>
+        <p class="u-text u-text-palette-1-base u-text-3"> nc 172.86.96.174 10105</p>
+        <p class="u-text u-text-palette-2-base u-text-4"> vsctf{@tt3rC4t_15_th3_b35t_c4t_1N_CNN!}</p>
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-2">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
+          <pre>            <code class="language-python"> import keras
+import base64
+import tempfile
+import numpy as np
+from skimage import io
+try:
+    from minipwn import *
+except:
+    !pip install -qq git+https://github.com/OAlienO/mini-pwntools.git
+    from minipwn import *
+	
+model = keras.models.load_model("challenge_model.h5")
+file_names = ["airplane", "automobile", "bird", "cat", "deer", "dog", "frog", "horse", "ship", "truck"]
+X = np.array([io.imread(f"./images/{file_names[i]}.jpg") for i in range(len(file_names))] + [io.imread("images/ottersec-logo.jpg")]) / 255.0
+y = np.array(list(range(10)) + [3])
+model.fit(X, y,
+          validation_data = [X, y],
+          epochs = 100)
+		  
+model.save("model.h5")
+with open("model.h5", "rb") as f:
+    data = base64.b64encode(f.read())
+temp = tempfile.NamedTemporaryFile(suffix=".h5")
+temp.write(base64.b64decode(data).strip())
+model = keras.models.load_model(temp.name) </code>
           </pre>
         </div>
       </div>
