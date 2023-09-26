@@ -10,7 +10,6 @@
 
 .u-section-1 .u-image-1 {
   min-height: 300px;
-  background-image: url("images/vsCTF.png");
   background-position: 50% 50%;
 }
 
@@ -74,8 +73,16 @@
     min-height: 189px;
   }
 
+  .u-section-1 .u-container-layout-1 {
+    padding-bottom: 0;
+  }
+
   .u-section-1 .u-layout-cell-2 {
     min-height: 100px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding: 0;
   }
 }
 
@@ -110,7 +117,6 @@
 
 .u-section-2 .u-image-1 {
   min-height: 300px;
-  background-image: url("images/seccon.png");
   background-position: 50% 50%;
 }
 
@@ -177,6 +183,10 @@
 
   .u-section-2 .u-layout-cell-2 {
     min-height: 100px;
+  }
+
+  .u-section-2 .u-container-layout-2 {
+    padding: 0;
   }
 
   .u-section-2 .u-custom-html-1 {
