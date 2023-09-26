@@ -32,7 +32,10 @@
   gtag('js', new Date());
 
   gtag('config', 'G-HPSRH3EZQZ');
-</script><meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script><meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-path-to-root="../" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-b931"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="../Home.html" class="u-image u-logo u-image-1" title="Home">
           <img src="../images/default-logo.png" class="u-logo-image u-logo-image-1">
@@ -78,6 +81,36 @@
     <section class="u-clearfix u-section-1" id="sec-4132">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1"></div>
+        <h1 class="u-text u-text-1"> Misc/reCAPTCHA v39</h1>
+        <p class="u-text u-text-2">Sample text. Click to select the Text Element.</p>
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-2">
+          <pre>            <code class="language-python"> import cv2
+import time
+import numpy as np
+import matplotlib.pyplot as plt
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+driver = webdriver.Chrome()
+driver.get("http://172.86.96.174:8000")
+time.sleep(3)
+button = driver.find_element(By.ID, "start")
+button.click()
+while True:
+    img = driver.find_element(By.ID, "display")
+    time.sleep(2)
+    with open("captcha.png", "wb") as f:
+        f.write(img.screenshot_as_png)
+    image = cv2.imread("captcha.png")
+    c = np.mean(image == [240, 240, 240])*100
+                
+    answer = driver.find_element(By.ID, "answer")
+    answer.send_keys(99-c)
+    
+    submit = driver.find_element(By.ID, "submit")
+    submit.click() </code>
+          </pre>
+          <script> Prism.highlightAll(); </script>
+        </div>
       </div>
     </section>
     

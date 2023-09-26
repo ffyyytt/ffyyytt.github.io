@@ -30,6 +30,11 @@
   margin: 0;
 }
 
+.u-section-1 .u-btn-1 {
+  background-image: none;
+  padding: 0;
+}
+
 .u-section-1 .u-custom-html-1 {
   height: auto;
   min-height: 29px;
