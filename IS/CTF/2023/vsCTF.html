@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>vsCTF</title>
+    <link rel="stylesheet" href="../../../nicepage.css" media="screen">
+<link rel="stylesheet" href="vsCTF.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../../../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../../../nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.18.6, nicepage.com">
+    
+    <link rel="icon" href="../../../images/DAK1.png">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "ffyyytt",
+		"logo": "../../../images/DAK1.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="vsCTF">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HPSRH3EZQZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HPSRH3EZQZ');
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-numbers/prism-line-numbers.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-numbers/prism-line-numbers.min.js"></script><meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="../../../" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-b931"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="../../../Home.html" class="u-image u-logo u-image-1" title="Home" data-image-width="251" data-image-height="251">
+          <img src="../../../images/DAK1.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="../../../Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="../../../AI/Artificial-Intelligence.html" style="padding: 10px 20px;">Artificial Intelligence</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../../../AI/AI_papers/AI-papers.html">Papers</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../../../AI/AI_competition/AI_competitions.html">Competitions</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="../../Information-Security.html" style="padding: 10px 20px;">Information Security</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../CTFs.html">CTFs</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="../../../Projects.html" style="padding: 10px 20px;">Projects</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-4"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../../../Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../../../AI/Artificial-Intelligence.html">Artificial Intelligence</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../../../AI/AI_papers/AI-papers.html">Papers</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../../../AI/AI_competition/AI_competitions.html">Competitions</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../../Information-Security.html">Information Security</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../CTFs.html">CTFs</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../../../Projects.html">Projects</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="sec-4132">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1"></div>
+        <h1 class="u-text u-text-1"> Misc/reCAPTCHA v39</h1>
+        <p class="u-text u-text-2"> I was browsing the web and happened to see a website that uses&nbsp;reCAPTCHA v39. I tried to solve it, but failed. Can you help me out? Surely it's much harder than v3...<br>
+          <a href="http://172.86.96.174:8000/" target="_blank" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">http://172.86.96.174:8000</a>
+        </p>
+        <p class="u-text u-text-palette-2-base u-text-3"> vsctf{W0u1d_y0u_r4th3r_p@y_$1_t0_s0Lv3_1t?}</p>
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-2">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
+          <pre>            <code class="language-python"> import cv2
+import time
+import numpy as np
+import matplotlib.pyplot as plt
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+driver = webdriver.Chrome()
+driver.get("http://172.86.96.174:8000")
+time.sleep(3)
+button = driver.find_element(By.ID, "start")
+button.click()
+while True:
+    img = driver.find_element(By.ID, "display")
+    time.sleep(2)
+    with open("captcha.png", "wb") as f:
+        f.write(img.screenshot_as_png)
+    image = cv2.imread("captcha.png")
+    c = np.mean(image == [240, 240, 240])*100
+                
+    answer = driver.find_element(By.ID, "answer")
+    answer.send_keys(99-c)
+    
+    submit = driver.find_element(By.ID, "submit")
+    submit.click() </code>
+          </pre>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-10 u-section-2" id="carousel_d9d2">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1"></div>
+        <h1 class="u-text u-text-1"> Misc/OtterSec Is Cat?</h1>
+        <p class="u-text u-text-2"> I trained a Convolutional Neural Network that can recognize ten different classes of images. The other day,&nbsp;NotDeGhost&nbsp;approached me and said: "Don't you know OtterSec is a Cat? Your model is broken!"Unfortunately, my model seems to classify the OtterSec logo as a truck. Can you fix it?<br>
+        </p>
+        <p class="u-text u-text-palette-1-base u-text-3"> nc 172.86.96.174 10105</p>
+        <p class="u-text u-text-palette-2-base u-text-4"> vsctf{@tt3rC4t_15_th3_b35t_c4t_1N_CNN!}</p>
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-2">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
+          <pre>            <code class="language-python"> import keras
+import base64
+import tempfile
+import numpy as np
+from skimage import io
+try:
+    from minipwn import *
+except:
+    !pip install -qq git+https://github.com/OAlienO/mini-pwntools.git
+    from minipwn import *
+	
+model = keras.models.load_model("challenge_model.h5")
+file_names = ["airplane", "automobile", "bird", "cat", "deer", "dog", "frog", "horse", "ship", "truck"]
+X = np.array([io.imread(f"./images/{file_names[i]}.jpg") for i in range(len(file_names))] + [io.imread("images/ottersec-logo.jpg")]) / 255.0
+y = np.array(list(range(10)) + [3])
+model.fit(X, y,
+          validation_data = [X, y],
+          epochs = 100)
+		  
+model.save("model.h5")
+with open("model.h5", "rb") as f:
+    data = base64.b64encode(f.read())
+temp = tempfile.NamedTemporaryFile(suffix=".h5")
+temp.write(base64.b64decode(data).strip())
+model = keras.models.load_model(temp.name) </code>
+          </pre>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-10 u-section-3" id="carousel_aa80">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1"></div>
+        <h1 class="u-text u-text-1"> Reverse/x0rr3al?!!</h1>
+        <p class="u-text u-text-2"> Are you being x0rr3al with me right now?!<br>
+        </p>
+        <p class="u-text u-text-palette-1-base u-text-3">
+          <a href="../../../files/x0rr3al.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1">File</a>
+        </p>
+        <p class="u-text u-text-palette-2-base u-text-4"> vsctf{w34k_4nt1_d3bugg3rs_4r3_n0_m4tch_f0r_th3_31337}</p>
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-2">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-c.min.js"></script>
+          <pre>            <code class="language-c"> /* This file was generated by the Hex-Rays decompiler version 7.7.0.220118.
+   Copyright (c) 2007-2021 Hex-Rays <info@hex-rays.com> Detected compiler: GNU C++
+*/
+#include <defs.h> //-------------------------------------------------------------------------
+// Function declarations
+__int64 (**init_proc())(void);
+void sub_1020();
+void sub_1030();
+void sub_1040();
+void sub_1050();
+void sub_1060();
+void sub_1070();
+void sub_1080();
+void sub_1090();
+void sub_10A0();
+void sub_10B0();
+void sub_10C0();
+void sub_10D0();
+void sub_10E0();
+void sub_10F0();
+void sub_1100();
+void sub_1110();
+void sub_1120();
+// int __fastcall _cxa_finalize(void *);
+// int putchar(int c);
+// char *strcpy(char *dest, const char *src);
+// size_t strlen(const char *s);
+// int printf(const char *format, ...);
+// int snprintf(char *s, size_t maxlen, const char *format, ...);
+// int close(int fd);
+// ssize_t read(int fd, void *buf, size_t nbytes);
+// __int64 ptrace(enum __ptrace_request request, ...);
+// int open(const char *file, int oflag, ...);
+// __int64 __isoc99_scanf(const char *, ...); weak
+// char *strcat(char *dest, const char *src);
+// __pid_t getppid(void);
+// void __noreturn exit(int status);
+// char *strstr(const char *haystack, const char *needle);
+void __fastcall __noreturn start(__int64 a1, __int64 a2, void (*a3)(void));
+char *sub_1270();
+__int64 sub_12A0(void); // weak
+char *sub_12E0();
+__int64 sub_1320();
+char *sub_1355();
+__int64 sub_13F8(void); // weak
+__int64 __fastcall sub_1483(__int64 a1, int a2);
+__int64 __fastcall sub_14F7(int a1);
+__int64 __fastcall sub_150A(unsigned __int8 a1, int a2);
+unsigned __int64 sub_156A();
+unsigned __int64 sub_1614();
+unsigned __int64 sub_16AD();
+__int64 __fastcall sub_1758(__int64 a1, int a2);
+_BOOL8 sub_17A4();
+void fini(void); // idb
+void term_proc();
+// int __fastcall _libc_start_main(int (__fastcall *main)(int, char **, char **), int argc, char **ubp_av, void (*init)(void), void (*fini)(void), void (*rtld_fini)(void), void *stack_end);
+// int __fastcall __cxa_finalize(void *);
+// __int64 _gmon_start__(void); weak
+//-------------------------------------------------------------------------
+// Data declarations
+_UNKNOWN main;
+_UNKNOWN init;
+__int64 (__fastcall *off_3D40)() = &amp;sub_1320; // weak
+__int64 (__fastcall *off_3D48)() = &amp;sub_12E0; // weak
+void *off_4008 = &amp;off_4008; // idb
+char src[] = "s3cR"; // idb
+char aVsct[] = "vsct"; // idb
+char a3ts3[] = "3ts3"; // idb
+char aFvsctiamfrnow0[] = "fvsctiamfrnow0kkeyw0wkeyw"; // idb
+char byte_4040[32] =
+{
+  '~',
+  '{',
+  'k',
+  '|',
+  'n',
+  's',
+  '\x7F',
+  ';',
+  '&lt;',
+  'c',
+  'W',
+  '&lt;',
+  'f',
+  '|',
+  '9',
+  'W',
+  'l',
+  ';',
+  'j',
+  '}',
+  'o',
+  'o',
+  ';',
+  'z',
+  '{',
+  'W',
+  '\0',
+  '\0',
+  '\0',
+  '\0',
+  '\0',
+  '\0'
+}; // weak
+char aZWf8weKWn8zwW9[27] = "<z;wf8we<|k`wn8zw|`;w;9;;?u"; weak="" char="" byte_4080;="" _dword="" dword_40a0[56];="" dest[10];="" idb="" byte_418a[10];="" byte_4194[10];="" byte_419e[10];="" -----="" (0000000000001000)="" ----------------------------------------------------="" __int64="" (**init_proc())(void)="" {="" (**result)(void);="" rax="" result="&amp;_gmon_start__;" if="" (="" &_gmon_start__="" )="" return="" (__int64="" (**)(void))_gmon_start__();="" result;="" }="" 4240:="" using="" guessed="" type="" _gmon_start__(void);="" (0000000000001020)="" void="" sub_1020()="" jumpout(0ll);="" 1026:="" control="" flows="" out="" of="" bounds="" to="" 0="" (0000000000001030)="" sub_1030()="" sub_1020();="" (0000000000001040)="" sub_1040()="" (0000000000001050)="" sub_1050()="" (0000000000001060)="" sub_1060()="" (0000000000001070)="" sub_1070()="" (0000000000001080)="" sub_1080()="" (0000000000001090)="" sub_1090()="" (00000000000010a0)="" sub_10a0()="" (00000000000010b0)="" sub_10b0()="" (00000000000010c0)="" sub_10c0()="" (00000000000010d0)="" sub_10d0()="" (00000000000010e0)="" sub_10e0()="" (00000000000010f0)="" sub_10f0()="" (0000000000001100)="" sub_1100()="" (0000000000001110)="" sub_1110()="" (0000000000001120)="" sub_1120()="" (0000000000001240)="" positive="" sp="" value="" has="" been="" detected,="" the="" output="" may="" be="" wrong!="" __fastcall="" __noreturn="" start(__int64="" a1,="" a2,="" (*a3)(void))="" v3;="" int="" v4;="" esi="" v5;="" [rsp-8h]="" [rbp-8h]="" byref="" *retaddr;="" [rsp+0h]="" [rbp+0h]="" v4="v5;" v5="v3;" _libc_start_main((int="" (__fastcall="" *)(int,="" **,="" **))main,="" v4,="" &retaddr,="" (void="" (*)(void))init,="" fini,="" a3,="" &v5);="" __halt();="" 124a:="" 8="" found="" 1251:="" variable="" 'v3'="" is="" possibly="" undefined="" (0000000000001270)="" *sub_1270()="" &byte_4080;="" 4080:="" (00000000000012a0)="" sub_12a0()="" 0ll;="" 12a0:="" sub_12a0();="" (00000000000012e0)="" *sub_12e0()="" *result;="" !byte_4080="" &__cxa_finalize="" _cxa_finalize(off_4008);="" byte_4080="1;" (0000000000001320)="" attributes:="" thunk="" sub_1320()="" sub_12a0(void);="" (0000000000001355)="" *sub_1355()="" strcpy(dest,="" src);="" strcat(dest,="" a3ts3);="" strcpy(byte_418a,="" avsct);="" strcat(byte_418a,="" afvsctiamfrnow0);="" strcpy(byte_4194,="" &afvsctiamfrnow0[5]);="" strcat(byte_4194,="" &afvsctiamfrnow0[10]);="" strcpy(byte_419e,="" &afvsctiamfrnow0[15]);="" strcat(byte_419e,="" &afvsctiamfrnow0[20]);="" (00000000000013f8)="" sub_13f8()="" i;="" j;="" [rsp+4h]="" [rbp-4h]="" for="" i="0;" <="25;" ++i="" int)byte_4040[i];="" dword_40a0[i]="result;" j="0;" ++j="" int)azwf8wekwn8zww9[j];="" dword_40a0[j="" +="" 26]="result;" 13f8:="" sub_13f8();="" 40a0:="" (0000000000001483)="" sub_1483(__int64="" a2)="" unsigned="" [rsp+14h]="" [rsp+18h]="" v3="0;" a2;="" *)(i="" a1);="" (00000000000014f7)="" sub_14f7(int="" a1)="" a1="" ^="" 0x12u;="" (000000000000150a)="" sub_150a(unsigned="" __int8="" a2="" (unsigned="" __int8)sub_150a((unsigned="" int)(char)(dest[11="" *="" a2]="" a1),="" int)(a2="" 1));="" else="" a1;="" (000000000000156a)="" sub_156a()="" [rsp+ch]="" [rbp-34h]="" v2;="" [rsp+10h]="" [rbp-30h]="" v3[4];="" [rbp-28h]="" [rsp+38h]="" v2="0x71267032217F2271LL;" qmemcpy(v3,="" "y2ez!|2k\"g2s`!|5f2s##2f&~y3",="" 27);="" putchar((char)(*((_byte="" *)&v3[-1]="" (int)i)="" 0x12));="" putchar(10);="" __readfsqword(0x28u)="" (0000000000001614)="" sub_1614()="" v2[5];="" qmemcpy(v2,="" "e\"\"f2e\"\"f32k\"g2u\"f2fz!2t~&u3",="" 28);="" *)v2="" (00000000000016ad)="" sub_16ad()="" "af&`f2`!d!`a#|u2fz#'2qz&~#2j\"``!s~333",="" 37);="" (0000000000001758)="" sub_1758(__int64="" ;="" (int)i="">= a2 )
+      break;
+    *(_BYTE *)((int)i + a1) ^= 0x5Au;
+  }
+  return result;
+}
+//----- (00000000000017A4) ----------------------------------------------------
+_BOOL8 sub_17A4()
+{
+  unsigned int v1; // [rsp+0h] [rbp-640h]
+  int fd; // [rsp+4h] [rbp-63Ch]
+  ssize_t v3; // [rsp+8h] [rbp-638h]
+  char needle[4]; // [rsp+16h] [rbp-62Ah] BYREF
+  _BYTE v5[14]; // [rsp+1Ah] [rbp-626h] BYREF
+  char v6[8]; // [rsp+28h] [rbp-618h] BYREF
+  char s[512]; // [rsp+30h] [rbp-610h] BYREF
+  char buf[1032]; // [rsp+230h] [rbp-410h] BYREF
+  unsigned __int64 v9; // [rsp+638h] [rbp-8h]
+  v9 = __readfsqword(0x28u);
+  strcpy(needle, "=&gt;8");
+  strcpy(v6, "566#&gt;8=");
+  strcpy(v5, ").(;9?");
+  strcpy(&amp;v5[7], "6.(;9?");
+  sub_1758((__int64)needle, 3);
+  sub_1758((__int64)v6, 7);
+  sub_1758((__int64)v5, 6);
+  sub_1758((__int64)&amp;v5[7], 6);
+  v1 = getppid();
+  snprintf(s, 0x200uLL, "/proc/%d/cmdline", v1);
+  fd = open(s, 0);
+  if ( fd == -1 )
+    return 0LL;
+  v3 = read(fd, buf, 0x400uLL);
+  close(fd);
+  if ( v3 &lt;= 0 )
+    return 0LL;
+  return strstr(buf, needle) || strstr(buf, v6) || strstr(buf, v5) || strstr(buf, &amp;v5[7]);
+}
+//----- (00000000000019A4) ----------------------------------------------------
+__int64 __fastcall main(int a1, char **a2, char **a3)
+{
+  char v4; // [rsp+Fh] [rbp-51h]
+  int i; // [rsp+10h] [rbp-50h]
+  int v6; // [rsp+14h] [rbp-4Ch]
+  char s[56]; // [rsp+20h] [rbp-40h] BYREF
+  unsigned __int64 v8; // [rsp+58h] [rbp-8h]
+  v8 = __readfsqword(0x28u);
+  if ( sub_17A4() )
+  {
+    sub_16AD();
+    exit(1);
+  }
+  if ( ptrace(PTRACE_TRACEME, 0LL, 1LL, 0LL) == -1 )
+  {
+    sub_16AD();
+    exit(1);
+  }
+  v6 = sub_1483((__int64)main, 512);
+  sub_1355();
+  sub_13F8();
+  if ( v6 != (unsigned int)sub_1483((__int64)main, 512) )
+  {
+    sub_16AD();
+    exit(1);
+  }
+  printf("p4ss m3 th3 fl4g: ");
+  __isoc99_scanf("%53s", s);
+  if ( strlen(s) == 53 )
+  {
+    for ( i = 0; i &lt;= 52; ++i )
+    {
+      v4 = sub_150A(s[i], 0);
+      if ( (unsigned int)sub_14F7(v4) != dword_40A0[i] )
+        goto LABEL_8;
+      if ( v6 != (unsigned int)sub_1483((__int64)main, 512) )
+      {
+        sub_16AD();
+        exit(1);
+      }
+    }
+    sub_1614();
+    return 0LL;
+  }
+  else
+  {
+LABEL_8:
+    sub_156A();
+    return 0LL;
+  }
+}
+// 11F0: using guessed type __int64 __isoc99_scanf(const char *, ...);
+// 13F8: using guessed type __int64 sub_13F8(void);
+// 40A0: using guessed type _DWORD dword_40A0[56];
+// 19A4: using guessed type char s[56];
+//----- (0000000000001B90) ----------------------------------------------------
+void __fastcall init(unsigned int a1, __int64 a2, __int64 a3)
+{
+  signed __int64 v4; // rbp
+  __int64 i; // rbx
+  init_proc();
+  v4 = &amp;off_3D48 - &amp;off_3D40;
+  if ( v4 )
+  {
+    for ( i = 0LL; i != v4; ++i )
+      ((void (__fastcall *)(_QWORD, __int64, __int64))*(&amp;off_3D40 + i))(a1, a2, a3);
+  }
+}
+// 3D40: using guessed type __int64 (__fastcall *off_3D40)();
+// 3D48: using guessed type __int64 (__fastcall *off_3D48)();
+//----- (0000000000001C00) ----------------------------------------------------
+void fini(void)
+{
+  ;
+}
+//----- (0000000000001C08) ----------------------------------------------------
+void term_proc()
+{
+  ;
+}
+// nfuncs=73 queued=37 decompiled=37 lumina nreq=0 worse=0 better=0
+// ALL OK, 37 function(s) have been successfully decompiled </z;wf8we<|k`wn8zw|`;w;9;;?u";>
+                </defs.h>
+              </info@hex-rays.com>
+            </code>
+          </pre>
+        </div>
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-3">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
+          <pre>            <code class="language-python"> dword_40A0 = [126, 123, 107, 124, 110, 115, 127, 59, 60, 99, 87, 60, 102, 124, 57, 87, 108, 59, 106, 125, 111, 111, 59, 122, 123, 87, 60, 122, 59, 87, 102, 56, 87, 101, 60, 124, 107, 96, 87, 110, 56, 122, 87, 124, 96, 59, 87, 59, 57, 59, 59, 63, 117]
+c = b"vsctf"
+x = 0x12
+for i in dword_40A0:
+    print(chr(i^8), end = "") </code>
+          </pre>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-d03e"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the Text Element.</p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
+  
+</body></html>
