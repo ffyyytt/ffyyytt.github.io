@@ -163,7 +163,7 @@ print(long_to_bytes(int("".join(map(str, s.tolist())), 2))) </code>
         <p class="u-text u-text-default u-text-2"> Just a baby encryption scheme for you. It features&nbsp;os.urandom, therefore it is perfectly safe.. <a href="../../../files/BMPaaS.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1"> BMPaaS.py</a>
         </p>
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
-          <code> from manchester_code import encode, decode, decode_bits
+          <pre>            <code class="language-python"> from manchester_code import encode, decode, decode_bits
 import numpy as np
 import soundfile as sf
 from Crypto.Util.number import *
@@ -178,6 +178,7 @@ for i in range(len(data)//5):
         a.append(1)
 s = np.array(list(decode_bits(a))).astype(int)
 print(long_to_bytes(int("".join(map(str, s.tolist())), 2))) </code>
+          </pre>
         </div>
         <p class="u-text u-text-default u-text-palette-2-base u-text-3"> Mayday, Mayday, We are flight EI-EMD. It is 10th January 2023. Be on time at (48.113,-1.571). The flag is ECW{HH:MM} with HH:MM the time in 24h format.</p>
         <p class="u-text u-text-default u-text-4">
