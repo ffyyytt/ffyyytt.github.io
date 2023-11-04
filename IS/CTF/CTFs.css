@@ -18,8 +18,6 @@
 .u-section-1 .u-image-1 {
   object-position: 42.39% 50%;
   width: 373px;
-  left: auto;
-  right: 0;
 }
 
 .u-section-1 .u-layout-cell-2 {
@@ -61,6 +59,11 @@
   .u-section-1 .u-layout-cell-1 {
     min-height: 173px;
     background-position: 50% 50%;
+  }
+
+  .u-section-1 .u-image-1 {
+    left: auto;
+    right: 0;
   }
 
   .u-section-1 .u-layout-cell-2 {
