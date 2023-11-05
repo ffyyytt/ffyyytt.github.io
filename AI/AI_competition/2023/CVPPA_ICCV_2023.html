@@ -105,7 +105,7 @@
         <div class="custom-expanded u-clearfix u-custom-html u-custom-html-1">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
-          <pre>            <code class="language-python"> import gc
+          <pre><code class="language-python">import gc
 import os
 import cv2
 import glob
@@ -145,7 +145,7 @@ if not os.path.isdir("best"):
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
-          <pre>            <code class="language-python"> try:
+          <pre><code class="language-python">try:
     tpu = tf.distribute.cluster_resolver.TPUClusterResolver() # TPU detection
 except ValueError:
     tpu = None
@@ -173,7 +173,7 @@ AUTO = tf.data.experimental.AUTOTUNE </code>
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
-          <pre>            <code class="language-python"> config = {
+          <pre><code class="language-python">config = {
     "seed": 1213,
     "pseudo_label": 1, # 0: false, 1: method 1, 2: method 2
     "test_path": "/content/DND-Diko-WWWR/WR2021/images/",
@@ -203,7 +203,7 @@ AUTO = tf.data.experimental.AUTOTUNE </code>
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
-          <pre>            <code class="language-python"> class dataGen(tf.keras.utils.Sequence):
+          <pre><code class="language-python">class dataGen(tf.keras.utils.Sequence):
     def __init__(self, labels, imagePaths, image_transform, pseudo_label, batch_size, test_path, shuffle = True, psd_thr = 0.9, steps = None):
         self.n = len(labels)
         self.labels = labels
@@ -274,7 +274,7 @@ AUTO = tf.data.experimental.AUTOTUNE </code>
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
-          <pre>            <code class="language-python"> class Margin(tf.keras.layers.Layer):
+          <pre><code class="language-python">class Margin(tf.keras.layers.Layer):
     def __init__(self, num_classes, margin = 0.3, scale=64, **kwargs):
         super().__init__(**kwargs)
         self.scale = scale
@@ -339,7 +339,7 @@ AUTO = tf.data.experimental.AUTOTUNE </code>
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
-          <pre>            <code class="language-python"> def get_backbone(backbone_name, x):
+          <pre><code class="language-python">def get_backbone(backbone_name, x):
     if hasattr(tf.keras.applications, backbone_name):
         headModel = tf.keras.layers.Lambda(lambda data: tf.keras.applications.efficientnet_v2.preprocess_input(data))(x)
         return tf.keras.layers.GlobalAveragePooling2D()(getattr(tf.keras.applications, backbone_name)(weights = "imagenet", include_top = False)(headModel))
@@ -376,7 +376,7 @@ def model_factory(backbones, embedding_dimention, n_classes):
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
-          <pre>            <code class="language-python"> class ValidCallback(tf.keras.callbacks.Callback):
+          <pre><code class="language-python">class ValidCallback(tf.keras.callbacks.Callback):
     def __init__(self, path, train_dataset, valid_dataset, test_dataset, train_dataset_aug, valid_dataset_aug, test_dataset_aug, tta = 3):
         self.tta = tta
         self.path = path
@@ -483,7 +483,7 @@ def model_factory(backbones, embedding_dimention, n_classes):
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
-          <pre>            <code class="language-python"> def seedBasic(seed=1312):
+          <pre><code class="language-python">def seedBasic(seed=1312):
     random.seed(seed)
     os.environ['PYTHONHASHSEED'] = str(seed)
     np.random.seed(seed)
