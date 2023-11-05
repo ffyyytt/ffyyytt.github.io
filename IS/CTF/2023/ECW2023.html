@@ -131,8 +131,7 @@ for i in range(len(data)//5):
     else:
         a.append(1)
 s = np.array(list(decode_bits(a))).astype(int)
-print(long_to_bytes(int("".join(map(str, s.tolist())), 2))) </code>
-          </pre>
+print(long_to_bytes(int("".join(map(str, s.tolist())), 2))) </code></pre>
         </div>
         <p class="u-text u-text-default u-text-palette-2-base u-text-3"> Mayday, Mayday, We are flight EI-EMD. It is 10th January 2023. Be on time at (48.113,-1.571). The flag is ECW{HH:MM} with HH:MM the time in 24h format.</p>
         <p class="u-text u-text-default u-text-4">
@@ -199,8 +198,7 @@ idata = np.array([[CHARSET[c] for c in d[:-1]] for d in tqdm(data)])
 s = list(s) 
 s = ''.join(s)
 with open("flag.bmp", "wb") as f:
-    f.write(base64.b85decode(s)) </code>
-          </pre>
+    f.write(base64.b85decode(s)) </code></pre>
         </div>
         <img class="u-image u-image-default u-preserve-proportions lazyload u-image-1" alt="" data-image-width="107" data-image-height="5" data-src="../../../images/ECW_BMPaaS_flag.png">
       </div>

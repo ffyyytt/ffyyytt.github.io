@@ -135,8 +135,7 @@ if not os.path.isdir("DND-Diko-WWWR"):
     !unzip -qq 1769319269-DND-Diko-WWWR.zip
 if not os.path.isdir("best"):
     !gdown 1Hw00ZLefW37StUMZ15K6Er0OdRgakLDi
-    !unzip -qq best.zip -d best/ </code>
-          </pre>
+    !unzip -qq best.zip -d best/ </code></pre>
         </div>
       </div>
     </section>
@@ -163,8 +162,7 @@ else:
     strategy = tf.distribute.get_strategy()
     print('Running on CPU')
 print("Number of accelerators: ", strategy.num_replicas_in_sync)
-AUTO = tf.data.experimental.AUTOTUNE </code>
-          </pre>
+AUTO = tf.data.experimental.AUTOTUNE </code></pre>
         </div>
       </div>
     </section>
@@ -188,8 +186,7 @@ AUTO = tf.data.experimental.AUTOTUNE </code>
     "n_classes": 7,
     "label_list": ["unfertilized", "_PKCa", "N_KCa", "NP_Ca", "NPK_", "NPKCa", "NPKCa+m+s"],
     "backbones": ["swin_transformer_v2.SwinTransformerV2Tiny_ns", "EfficientNetV2S"]
-} </code>
-          </pre>
+} </code></pre>
         </div>
       </div>
     </section>
@@ -258,8 +255,7 @@ AUTO = tf.data.experimental.AUTOTUNE </code>
         images = np.array([self.read_image(self.imagePaths[i]) for i in ids])
         label = np.array([labels_np[i] for i in ids])
         label_score = np.array([labels_scores_np[i] for i in ids])
-        return {"image": images, "label": label_score}, label_score </code>
-          </pre>
+        return {"image": images, "label": label_score}, label_score </code></pre>
         </div>
       </div>
     </section>
@@ -329,8 +325,7 @@ AUTO = tf.data.experimental.AUTOTUNE </code>
             'margin': self.margin,
             'num_classes': self.num_classes,
         })
-        return config </code>
-          </pre>
+        return config </code></pre>
         </div>
       </div>
     </section>
@@ -360,8 +355,7 @@ def model_factory(backbones, embedding_dimention, n_classes):
     margin = Margin(num_classes = n_classes, name = "margin")([headModel, label])
     output = tf.keras.layers.Softmax(dtype=tf.float32, name = "output")(margin)
     model = tf.keras.models.Model(inputs = [image, label], outputs = [output])
-    return model </code>
-          </pre>
+    return model </code></pre>
         </div>
       </div>
     </section>
@@ -471,8 +465,7 @@ def model_factory(backbones, embedding_dimention, n_classes):
         # df = self.evaluation(features, labels, model)
         df, df_full = self.prediction(train_feature, train_label, model)
         df.to_csv(os.path.join(self.path, f"predictions_{config['data']}_{epoch}.txt"), index = False, header = False, sep = " ")
-        df_full.to_csv("pseudo.csv", index = False) </code>
-          </pre>
+        df_full.to_csv("pseudo.csv", index = False) </code></pre>
         </div>
       </div>
     </section>
@@ -587,8 +580,7 @@ H = model.fit(train_dataset_inf,
               verbose = 1,
               epochs = config["epochs"],
               callbacks = [validCallback],
-              steps_per_epoch = config["steps_per_epoch"]) </code>
-          </pre>
+              steps_per_epoch = config["steps_per_epoch"]) </code></pre>
         </div>
       </div>
     </section>
