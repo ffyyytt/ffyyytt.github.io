@@ -24,6 +24,9 @@
     
     
     
+    
+    
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -101,7 +104,7 @@
       </div>
     </section>
     <section class="u-clearfix u-section-2" id="sec-253f">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Misc</h2>
       </div>
     </section>
@@ -154,7 +157,7 @@ print(long_to_bytes(int("".join(map(str, s.tolist())), 2))) </code></pre>
       </div>
     </section>
     <section class="u-clearfix u-section-6" id="sec-a050">
-      <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Crypto</h2>
       </div>
     </section>
@@ -206,34 +209,71 @@ with open("flag.bmp", "wb") as f:
     </section>
     <section class="u-clearfix u-section-9" id="sec-9c52">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h3 class="u-text u-text-default u-text-1"> BMPaaS</h3>
-        <p class="u-text u-text-default u-text-2"> Just a baby encryption scheme for you. It features&nbsp;os.urandom, therefore it is perfectly safe.. <a href="../../../files/BMPaaS.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1"> BMPaaS.py</a>
+        <h3 class="u-text u-text-default u-text-1"> CryptoFlow</h3>
+        <p class="u-text u-text-default u-text-2"> You have misconfigured your IA who took the control of your computer. It's now mocking you using its favorite method: an unsolvable challenge. Find the password to take back the control of your system. <a href="../../../files/ECW_CryptoFlow.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1">challenge.zip</a>
+        </p>
+        <p class="u-text u-text-default u-text-palette-2-base u-text-3">PWN SBox and do whatever you want.&nbsp;ECW{Whyd0yOuMod1fyMySb0xDude??!}.</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-10" id="sec-e9df">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1"> Straightline</h3>
+        <p class="u-text u-text-default u-text-2"> You got access to a web site created by ALICE, the artificial intelligence. Your goal is to find an administrator access in order to obtain information to stop ALICE. To your disposal is the source of the cryptographic algorithm used for the authenfication. <a href="../../../files/ECW_Straightline.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1">challenge.zip</a>
+        </p>
+        <p class="u-text u-text-default u-text-palette-2-base u-text-3">Request token for "admim" then calculate for "admin" its mapping 1:1.</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-11" id="sec-28cb">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h2 class="u-text u-text-default u-text-1"> Reverse</h2>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-12" id="sec-c387">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1"> moth</h3>
+        <p class="u-text u-text-default u-text-2"> Find the correct entry. <a href="../../../files/ECW_moth.zip" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1">challenge.zip</a>
         </p>
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
-          <pre><code class="language-python">import os
-import base64
+          <pre><code class="language-python">import sys
+import copy
 import numpy as np
-from pwn import *
-from tqdm.notebook import *
-from collections import Counter
-r = remote("instances.challenge-ecw.fr", 34646)
-for i in trange(200000):
-    r.recvuntil(b"Enter your choice: ")
-    r.sendline(b"1")
-    s = r.recvline()
-    with open("file.txt", "ab") as f:
-        f.write(s)
-CHARSETD = base64._b85alphabet.decode()
-CHARSET = {c: i for i, c in enumerate(CHARSETD)}
-with open("file.txt", "r") as f:
-    data = f.readlines()
-idata = np.array([[CHARSET[c] for c in d[:-1]] for d in tqdm(data)])
-s = list(s) 
-s = ''.join(s)
-with open("flag.bmp", "wb") as f:
-    f.write(base64.b85decode(s)) </code></pre>
+s = [1, 2, 3, 4, 5]
+a = [[1, 1, 1, 1, 2, 3, 3, 4, 5],
+[6, 1, 7, 2, 2, 3, 4, 4, 5],
+[6, 7, 7, 7, 2, 2, 8, 4, 5],
+[6, 7, 9, 9, 9, 9, 8, 4, 5],
+[6, 10, 9, 11, 11, 8, 8, 8, 13],
+[10, 10, 10, 12, 11, 11, 14, 13, 13],
+[10, 15, 15, 12, 11, 14, 14, 14, 13],
+[16, 15, 15, 15, 18, 19, 19, 19, 13],
+[16, 16, 17, 18, 18, 18, 18, 19, 19]]
+d = {x: s[:np.array(a).flatten().tolist().count(x)] for x in range(20)}
+a = np.array(a)
+av = np.zeros_like(a)
+def dequy(a, av, k, d):
+    r = False
+    if k == 81:
+        print(av)
+        return True
+    i, j = (k//9), (k%9)
+    for v in d[a[i, j]]:
+        v4 = 0
+        av[i, j] = v
+        sys.stdout.flush()
+        for n in range(-1, 2):
+                for ii in range(-1, 2):
+                    if (j + ii &gt;= 0 and i + n &gt;= 0 and j + ii &lt;= 8 and i + n &lt;= 8 and (ii != 0 or n != 0) and v == av[n + i, j + ii]):
+                        v4 = 1
+        if v4 == 0:
+            d_new = copy.deepcopy(d)
+            d_new[a[i, j]].remove(v)
+            r = dequy(a, av, k+1, d_new)
+        if not r:
+            av[i, j] = 0
+    return r
+	
+dequy(a, av, 0, d) </code></pre>
         </div>
-        <img class="u-image u-image-default u-preserve-proportions lazyload u-image-1" alt="" data-image-width="107" data-image-height="5" data-src="../../../images/ECW_BMPaaS_flag.png">
       </div>
     </section>
     
@@ -242,4 +282,6 @@ with open("flag.bmp", "wb") as f:
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-d03e"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">Duong Anh Kiet</p>
       </div></footer>
+    
+  
 </body></html>
