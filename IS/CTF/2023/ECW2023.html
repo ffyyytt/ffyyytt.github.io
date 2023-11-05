@@ -23,6 +23,7 @@
     
     
     
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -110,7 +111,7 @@
       </div>
     </section>
     <section class="u-clearfix u-section-4" id="sec-df41">
-      <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h3 class="u-text u-text-default u-text-1"> FlyAway</h3>
         <p class="u-text u-text-default u-text-2"> Our Brittany antenna has intercepted this message. We think it contains major information. <a href="../../../files/mission.wav" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1">mission.wav</a>
         </p>
@@ -142,7 +143,7 @@ print(long_to_bytes(int("".join(map(str, s.tolist())), 2))) </code></pre>
       </div>
     </section>
     <section class="u-clearfix u-section-5" id="sec-1040">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-text u-text-default u-text-1"> Babel</h3>
         <p class="u-text u-text-default u-text-2"> You found these two files in a dead drop. Decipher it. <a href="../../../files/ECW_Babel_unknown.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1">unkown.txt</a>&nbsp;
         </p>
@@ -153,7 +154,7 @@ print(long_to_bytes(int("".join(map(str, s.tolist())), 2))) </code></pre>
       </div>
     </section>
     <section class="u-clearfix u-section-6" id="sec-a050">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Crypto</h2>
       </div>
     </section>
@@ -172,6 +173,38 @@ print(long_to_bytes(int("".join(map(str, s.tolist())), 2))) </code></pre>
       </div>
     </section>
     <section class="u-clearfix u-section-8" id="sec-4bef">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1"> BMPaaS</h3>
+        <p class="u-text u-text-default u-text-2"> Just a baby encryption scheme for you. It features&nbsp;os.urandom, therefore it is perfectly safe.. <a href="../../../files/BMPaaS.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1"> BMPaaS.py</a>
+        </p>
+        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
+          <pre><code class="language-python">import os
+import base64
+import numpy as np
+from pwn import *
+from tqdm.notebook import *
+from collections import Counter
+r = remote("instances.challenge-ecw.fr", 34646)
+for i in trange(200000):
+    r.recvuntil(b"Enter your choice: ")
+    r.sendline(b"1")
+    s = r.recvline()
+    with open("file.txt", "ab") as f:
+        f.write(s)
+CHARSETD = base64._b85alphabet.decode()
+CHARSET = {c: i for i, c in enumerate(CHARSETD)}
+with open("file.txt", "r") as f:
+    data = f.readlines()
+idata = np.array([[CHARSET[c] for c in d[:-1]] for d in tqdm(data)])
+s = list(s) 
+s = ''.join(s)
+with open("flag.bmp", "wb") as f:
+    f.write(base64.b85decode(s)) </code></pre>
+        </div>
+        <img class="u-image u-image-default u-preserve-proportions lazyload u-image-1" alt="" data-image-width="107" data-image-height="5" data-src="../../../images/ECW_BMPaaS_flag.png">
+      </div>
+    </section>
+    <section class="u-clearfix u-section-9" id="sec-9c52">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h3 class="u-text u-text-default u-text-1"> BMPaaS</h3>
         <p class="u-text u-text-default u-text-2"> Just a baby encryption scheme for you. It features&nbsp;os.urandom, therefore it is perfectly safe.. <a href="../../../files/BMPaaS.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-file-link u-hover-none u-none u-text-palette-1-base u-btn-1"> BMPaaS.py</a>
@@ -209,6 +242,16 @@ with open("flag.bmp", "wb") as f:
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-d03e"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">Duong Anh Kiet</p>
       </div></footer>
-    
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
   
 </body></html>
