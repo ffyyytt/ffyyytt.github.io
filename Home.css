@@ -1,10 +1,10 @@
 .u-section-1 .u-sheet-1 {
-  min-height: 1346px;
+  min-height: 1386px;
 }
 
 .u-section-1 .u-layout-wrap-1 {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .u-section-1 .u-layout-cell-1 {
@@ -40,6 +40,10 @@
 .u-section-1 .u-btn-1 {
   background-image: none;
   padding: 0;
+}
+
+.u-section-1 .u-custom-html-1 {
+  margin: 30px 6px 0 0;
 }
 
 .u-section-1 .u-layout-cell-2 {
@@ -109,6 +113,10 @@
   }
 
   .u-section-1 .u-text-4 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-custom-html-1 {
     margin-right: 0;
   }
 
