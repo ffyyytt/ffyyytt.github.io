@@ -252,8 +252,8 @@
 
 .u-section-3 .u-image-1 {
   width: 340px;
-  left: 0;
-  right: auto;
+  height: 291px;
+  margin: 0 auto 0 0;
 }
 
 .u-section-3 .u-layout-cell-2 {
@@ -292,6 +292,8 @@
 
   .u-section-3 .u-image-1 {
     inset: auto;
+    width: 313px;
+    height: 268px;
   }
 
   .u-section-3 .u-layout-cell-2 {
@@ -314,6 +316,11 @@
 
   .u-section-3 .u-container-layout-1 {
     padding: 0;
+  }
+
+  .u-section-3 .u-image-1 {
+    width: 240px;
+    height: 205px;
   }
 
   .u-section-3 .u-layout-cell-2 {
